@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Down from "../public/images/down.png";
 import Add from "../public/images/add.png";
 import Heart from "../public/images/heart.png";
 import Send from "../public/images/send.png";
@@ -9,12 +10,13 @@ const Header = () => {
     return (
         <Wrapper>
             <Link href="/">
-                <span>Instagram</span>
+                <LogoText>Instagram</LogoText>
             </Link>
+            <Image src={Down} alt="down" width={15} height={15} />
             <ImageWrapper>
-                <Image src={Add} alt="logo" width={30} height={30} />
-                <Image src={Heart} alt="logo" width={30} height={30} />
-                <Image src={Send} alt="logo" width={30} height={30} />
+                <Image src={Add} alt="add" width={30} height={30} />
+                <Image src={Heart} alt="heart" width={30} height={30} />
+                <Image src={Send} alt="send" width={30} height={30} />
             </ImageWrapper>
         </Wrapper>
     )
@@ -37,4 +39,10 @@ const ImageWrapper = styled.div`
     margin-left: auto; 
     display: flex;
     justify-content: space-between;
+`;
+
+const LogoText = styled.span`
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 5px;
 `;

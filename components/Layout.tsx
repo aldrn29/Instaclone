@@ -1,5 +1,5 @@
 import Header from './Header'
-import Footer from './Footer'
+import Menu from './Menu'
 
 export default function Layout({ children }) {
     return (
@@ -7,7 +7,7 @@ export default function Layout({ children }) {
             <title>Instagram</title>
             <Header />
             {children}
-            <Footer />
+            <Menu />
         </>
     )
 }
