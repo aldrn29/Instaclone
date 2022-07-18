@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Main from '../components/Main'
+import Index from '../components/Index'
 
 export default function Home() {
     return (
-        <Main />
+        <Index />
     )
 }
