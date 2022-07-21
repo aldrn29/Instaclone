@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const Index = () => {
     return (
