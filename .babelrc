@@ -9,6 +9,14 @@
         [
             "styled-components",
             { "ssr": true, "displayName": true, "preprocess": false }
+            // {
+            //     "fileName": true,
+            //     "displayName": true,
+            //     "pure": true
+            // }
+            // fileName : 코드가 포함된 파일명을 알려줌
+            // displayName : 클래스명에 해당 스타일 정보 추가
+            // pure : 사용하지 않은 속성 제거
         ]
     ]
 }
