@@ -7,7 +7,7 @@ const Content = ({ data }) => {
 
     const getMorePost = async () => {
         const res = await fetch(
-        `https://jsonplaceholder.typicode.com/todos?_start=${posts.length}&_limit=10`
+            `https://jsonplaceholder.typicode.com/todos?_start=${posts.length}&_limit=10`
         );
         const newPosts = await res.json();
         setPosts((post) => [...post, ...newPosts]);
