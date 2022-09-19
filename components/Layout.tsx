@@ -1,13 +1,15 @@
 import Header from './Header'
 import Menu from './Menu'
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
     return (
         <>
             <title>Instagram</title>
             <Header />
-            {children}
+            <main>{children}</main>
             <Menu />
         </>
     )
 }
+
+export default Layout;
