@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import Home from "../public/images/home.png";
 import Magnifier from "../public/images/magnifier.png";
@@ -9,11 +10,21 @@ import styled from "styled-components";
 const Menu = () => {
     return (
         <Wrapper>
-            <Image src={Home} alt="logo" width={30} height={30} />
-            <Image src={Magnifier} alt="magnifier" width={30} height={30} />
-            <Image src={Video} alt="video" width={30} height={30} />
-            <Image src={Bag} alt="chat" width={30} height={30} />
-            <Image src={DefalutProfile} alt="default" width={30} height={30} />
+            <Link href="/">
+                <Image src={Home} alt="logo" width={30} height={30} />
+            </Link>
+            <Link href="/search">
+                <Image src={Magnifier} alt="magnifier" width={30} height={30} />
+            </Link>
+            <Link href="/video">
+                <Image src={Video} alt="video" width={30} height={30} />
+            </Link>
+            <Link href="/shopping">
+                <Image src={Bag} alt="chat" width={30} height={30} />
+            </Link>
+            <Link href="/profile">
+                <Image src={DefalutProfile} alt="default" width={30} height={30} />
+            </Link>
         </Wrapper>
     )
 }
