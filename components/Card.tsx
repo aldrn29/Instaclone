@@ -5,8 +5,16 @@ import Heart from "../public/images/heart.png";
 import Chat from "../public/images/chat.png";
 import Send from "../public/images/send.png";
 import Mark from "../public/images/mark.png";
+import { ColorTheme } from '../styles/theme';
+import { useContext } from 'react';
+import { ThemeContext } from '../pages/_app';
+
+interface ToggleProps {
+    colorTheme: ColorTheme;
+}
 
 const Card = () => {
+    const { colorTheme, toggleColorTheme } = useContext(ThemeContext);
 
     return (
         <Wrapper>
@@ -15,7 +23,7 @@ const Card = () => {
                     <Image src={DefalutProfile} alt="default" width={30} height={30} />
                     <div>aldrn</div>
                 </CardTop>
-                <CardMiddld>
+                <CardMiddld colorTheme={colorTheme}>
                     image
                 </CardMiddld>
                 <CardBottom>
@@ -58,8 +66,10 @@ const CardTop = styled.div`
     }
 `;
 
-const CardMiddld = styled.div`
+const CardMiddld = styled.div<ToggleProps>`
     background-color: gray;
+    color: ${({ colorTheme }) => colorTheme.MAIN};
+    background-color: ${({ colorTheme }) => colorTheme.BACKGROUND};
 `;
 
 const CardBottom = styled.div`
