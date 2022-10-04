@@ -1,7 +1,10 @@
-export default function Search() {
+import Search from '../components/Search'
+
+export default function search() {
     return (
         <div>
             Search
+            <Search />
         </div>
     )
 }
